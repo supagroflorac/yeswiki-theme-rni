@@ -1,0 +1,31 @@
+header {
+  background: url(../img/header-background.jpg) center left;
+  background-size: cover;
+  min-height: $rni-header-minheight;
+  padding: $rni-padding 0;
+  a {
+    color: $rni-color-text;
+    margin: 0;
+  }
+
+  a:hover {
+    color: $rni-color-text;
+    text-decoration: none;
+  }
+
+  h1 {
+    max-width: 7em;
+    margin: auto;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 2.5em;
+  }
+}
+
+header::after {
+  content: ' ';
+  display: block;
+  border-bottom: 3px $rni-color-main solid;
+  margin-top: 1em;
+  transform: skew(0deg, -1deg);
+}

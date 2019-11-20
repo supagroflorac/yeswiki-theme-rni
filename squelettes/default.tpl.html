@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="{{configuration param=" charset"}}">
+  <meta name="keywords" content="{{configuration param=" meta_keywords"}}">
+  <meta name="description" content="{{configuration param=" meta_description"}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+<body {{parambody}}>
+  <header>
+    <a href="./">
+      {{include page="PageHeader"}}
+    </a>
+  </header>
+
+  <section id="categories">
+    {{include page="PageCategories"}}
+  </section>
+
+  <section id="main" role="main" {{doubleclic}}>
+    <div class="include">{WIKINI_PAGE}</div>
+  </section>
+
+  <footer>
+    {{include page="PageFooter"}}
+  </footer>
+  
+  {{linkjavascript}}
+  </body>
+</html>

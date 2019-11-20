@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="{{configuration param=" charset"}}">
+  <meta name="keywords" content="{{configuration param=" meta_keywords"}}">
+  <meta name="description" content="{{configuration param=" meta_description"}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+<body {{parambody}}>
+  <header>
+    <a href="./">
+      {{include page="PageHeader"}}
+    </a>
+  </header>
+
+  <section id="presentation">
+    {{include page="PagePresentation"}}
+  </section>
+
+  <section id="categories" class="mainPage">
+    {{include page="PageCategories"}}
+  </section>
+
+  <section id="main" class="program" role="main" {{doubleclic}}>
+    <div class="include mainPage">{WIKINI_PAGE}</div>
+  </section>
+
+  <section id="map">
+    <iframe class="partnersMap" src="https://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73" scrolling="no"></iframe>
+  </section>
+
+
+  <footer>
+    {{include page="PageFooter"}}
+  </footer>
+
+  {{linkjavascript}}
+</body>

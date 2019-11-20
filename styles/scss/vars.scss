@@ -1,0 +1,20 @@
+
+$rni-color-text: #4d4c4c; //#p, h1
+$rni-color-main: #f9b140; //h2
+$rni-color-second: #79b4de; //h3
+$rni-color-background: white;
+$rni-color-gradient: linear-gradient($rni-color-main, #ffdd3d);
+
+$rni-font-size: 2em;
+$rni-padding: 2em;
+
+$bold: 700;
+$semiBold: 600;
+
+$rni-page-maxwidth: 50em;
+
+$rni-page-smallscreen-maxwidth: 640px;
+$rni-page-largescreen-minwidth: 640px;
+
+$rni-header-minheight: 12em;
+$rni-footer-minheight: $rni-header-minheight;

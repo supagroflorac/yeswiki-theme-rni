@@ -1,0 +1,95 @@
+#categories {
+  background: $rni-color-main;
+  color: $rni-color-background;
+
+  padding: calc(#{$rni-padding} / 2);
+
+
+  ul {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: center;
+    //padding: calc(#{$rni-padding} / 2) 0;
+    margin: 0 auto;
+    max-width: 10em;
+    height: 100%;
+
+
+    font-size: 2em;
+
+    li {
+      list-style: none;
+      padding: 0 calc(#{$rni-padding} / 2);
+
+      a {
+        color: $rni-color-background;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a::before {
+        content: ' ';
+        display: inline-block;
+        background: url(../img/inscriptions.svg);
+        background-size: contain;
+        height: 1em;
+        width: 1em;
+        margin-right: 0.3em;
+      }
+    }
+
+    li:nth-child(2) {
+      a::before {
+        background: url(../img/ressources.svg);
+        background-size: contain;
+      }
+    }
+
+    li:nth-child(3) {
+      a::before {
+        background: url(../img/streaming.svg);
+        background-size: contain;
+      }
+    }
+
+    li:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+#categories.mainPage {
+  min-height: $rni-header-minheight;
+}
+
+@media only screen and (min-width : $rni-page-smallscreen-maxwidth) {
+  #categories {
+    ul {
+      flex-flow: row;
+      max-width: none;
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media only screen and (min-width : $rni-page-largescreen-minwidth) {
+  #categories.mainPage {
+    ul {
+      justify-content: space-around;
+      height: 100%;
+      align-items: center;
+      li {
+        vertical-align: middle;
+      }
+
+      li a::before {
+        display: block;
+        height: 5em;
+        width: 5em;
+      }
+    }
+  }
+}
