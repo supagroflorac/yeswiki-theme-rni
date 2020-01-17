@@ -1,56 +1,159 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-html { font-family: 'Open Sans', sans-serif; }
+@font-face {
+  font-family: 'Ostrich Sans Inline';
+  src: url("../fonts/Ostrich Sans Inline-regular.otf"); }
+html {
+  font-family: 'Open Sans', sans-serif; }
 
-#main { color: #4d4c4c; padding: 2em; }
-#main h1 { color: #4d4c4c; text-transform: uppercase; }
-#main h2 { color: #f9b140; text-transform: uppercase; }
-#main h3 { color: #79b4de; text-transform: uppercase; }
+#main {
+  color: #4d4c4c;
+  padding: 2em; }
+  #main h1 {
+    color: #4d4c4c;
+    text-transform: uppercase; }
+  #main h2 {
+    color: #f9b140;
+    text-transform: uppercase; }
+  #main h3 {
+    color: #79b4de;
+    text-transform: uppercase; }
 
-div.include { max-width: 50em; margin: auto; height: 100%; }
+div.include {
+  max-width: 50em;
+  margin: auto;
+  height: 100%; }
 
-div.include.mainPage table { width: 100%; }
-div.include.mainPage tr { border-bottom: 1px solid #79b4de; }
-div.include.mainPage td { padding: 0.2em 0.5em; }
-div.include.mainPage td:nth-child(1) { border-right: 1px solid #79b4de; }
+div.include.mainPage table {
+  width: 100%; }
+div.include.mainPage tr {
+  border-bottom: 1px solid #79b4de; }
+div.include.mainPage td {
+  padding: 0.2em 0.5em; }
+div.include.mainPage td:nth-child(1) {
+  border-right: 1px solid #79b4de; }
 
-header { background: url(../img/header-background.jpg) center left; background-size: cover; min-height: 12em; padding: 2em 0; }
-header a { color: #4d4c4c; margin: 0; }
-header a:hover { color: #4d4c4c; text-decoration: none; }
-header h1 { max-width: 7em; margin: auto; margin-top: 0.5em; text-align: center; font-size: 2.5em; }
+header {
+  background: url(../img/header-background.jpg) center left;
+  background-size: cover;
+  height: 12em;
+  padding: 2em 0 0 0;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: space-around; }
+  header a {
+    color: #4d4c4c;
+    margin: 0;
+    height: 100%; }
+  header a:hover {
+    color: #4d4c4c;
+    text-decoration: none; }
+  header h1 {
+    max-width: 7em;
+    margin: auto;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Ostrich Sans Inline';
+    font-style: normal; }
 
-header::after { content: ' '; display: block; border-bottom: 3px #f9b140 solid; margin-top: 1em; transform: skew(0deg, -1deg); }
+header::after {
+  content: ' ';
+  display: block;
+  border-bottom: 3px #f9b140 solid;
+  margin-top: 1em;
+  transform: skew(0deg, -1deg); }
 
-footer { background: #4d4c4c; color: white; min-height: 12em; padding: 2em; }
+footer {
+  background: #4d4c4c;
+  color: white;
+  min-height: 12em;
+  padding: 2em; }
 
-#categories { background: #f9b140; color: white; padding: calc(2em / 2); }
-#categories ul { display: flex; flex-flow: column; align-items: stretch; justify-content: center; margin: 0 auto; max-width: 10em; height: 100%; font-size: 2em; }
-#categories ul li { list-style: none; padding: 0 calc(2em / 2); }
-#categories ul li a { color: white; }
-#categories ul li a:hover { text-decoration: none; }
-#categories ul li a::before { content: ' '; display: inline-block; background: url(../img/inscriptions.svg); background-size: contain; height: 1em; width: 1em; margin-right: 0.3em; }
-#categories ul li:nth-child(2) a::before { background: url(../img/ressources.svg); background-size: contain; }
-#categories ul li:nth-child(3) a::before { background: url(../img/streaming.svg); background-size: contain; }
-#categories ul li:hover { transform: scale(1.1); }
+#categories {
+  background: #f9b140;
+  color: white;
+  padding: calc(2em / 2); }
+  #categories ul {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 10em;
+    height: 100%;
+    font-size: 2em; }
+    #categories ul li {
+      list-style: none;
+      padding: 0 calc(2em / 2); }
+      #categories ul li a {
+        color: white; }
+      #categories ul li a:hover {
+        text-decoration: none; }
+      #categories ul li a::before {
+        content: ' ';
+        display: inline-block;
+        background: url(../img/inscriptions.svg);
+        background-size: contain;
+        height: 1em;
+        width: 1em;
+        margin-right: 0.3em; }
+    #categories ul li:nth-child(2) a::before {
+      background: url(../img/ressources.svg);
+      background-size: contain; }
+    #categories ul li:nth-child(3) a::before {
+      background: url(../img/streaming.svg);
+      background-size: contain; }
+    #categories ul li:hover {
+      transform: scale(1.1); }
 
-#categories.mainPage { min-height: 12em; }
+#categories.mainPage {
+  min-height: 12em; }
 
-@media only screen and (min-width: 640px) { #categories ul { flex-flow: row; max-width: none; font-size: 1.3em; } }
-@media only screen and (min-width: 640px) { #categories.mainPage ul { justify-content: space-around; height: 100%; align-items: center; }
-  #categories.mainPage ul li { vertical-align: middle; }
-  #categories.mainPage ul li a::before { display: block; height: 5em; width: 5em; } }
-#presentation { min-height: 12em; padding: 2em; }
+@media only screen and (min-width: 640px) {
+  #categories ul {
+    flex-flow: row;
+    max-width: none;
+    font-size: 1.3em; } }
+@media only screen and (min-width: 640px) {
+  #categories.mainPage ul {
+    justify-content: space-around;
+    height: 100%;
+    align-items: center; }
+    #categories.mainPage ul li {
+      vertical-align: middle; }
+    #categories.mainPage ul li a::before {
+      display: block;
+      height: 5em;
+      width: 5em; } }
+#presentation {
+  min-height: 12em;
+  padding: 2em; }
 
-#map { min-height: 12em; }
-#map iframe { width: 110%; height: 110%; border: 0; margin-top: -1em; margin-bottom: -1em; }
+#map {
+  min-height: 12em; }
+  #map iframe {
+    width: 110%;
+    height: 110%;
+    border: 0;
+    margin-top: -1em;
+    margin-bottom: -1em; }
 
-* { box-sizing: content-box; }
+* {
+  box-sizing: content-box; }
 
-body { display: flex; flex-flow: column; font-size: 2em; }
+body {
+  display: flex;
+  flex-flow: column;
+  font-size: 2em; }
 
-header, footer, #presentation, #categories, #map { transform: skew(0deg, -1deg); }
+header, footer, #presentation, #categories, #map {
+  transform: skew(0deg, -1deg); }
 
-header { margin-top: -1em; }
+header {
+  margin-top: -1em; }
 
-header > *, footer > *, #presentation > *, #categories > * { transform: skew(0deg, 1deg); }
+header > *, footer > *, #presentation > *, #categories > * {
+  transform: skew(0deg, 1deg); }
 
 /*# sourceMappingURL=default.css.map */
